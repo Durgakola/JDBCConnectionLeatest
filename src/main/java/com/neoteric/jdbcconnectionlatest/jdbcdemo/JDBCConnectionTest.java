@@ -2,13 +2,15 @@ package com.neoteric.jdbcconnectionlatest.jdbcdemo;
 
 import java.sql.*;
 
-public class JDBCConnection {
-    private static final String URL = "jdbc:mysql://localhost:3306/sonar";
-    private static final String USER = "root";
-    private static final String PASSWORD = "12345";
+
+public class JDBCConnectionTest {
+     private static String URL = "jdbc:mysql://localhost:3306/sonar";
+    private static String USER = "root";
+    private static String PASSWORD = "12345";
 
     public static void main(String[] args) {
-        try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD)) {
+        try {
+            Connection connection  = DriverManager.getConnection(URL,USER,PASSWORD);
             System.out.println("Connected to the database");
 
             // Read
@@ -19,12 +21,11 @@ public class JDBCConnection {
         }
     }
 
-
-    private static void readRecords(Connection connection) {
+    static void readRecords(Connection connection) {
         String selectSQL = "SELECT * FROM employee";
         try{
             Statement stmt = connection.createStatement();
-             ResultSet rs = stmt.executeQuery(selectSQL);
+            ResultSet rs = stmt.executeQuery(selectSQL);
 
             while (rs.next()) {
                 int id = rs.getInt("id");

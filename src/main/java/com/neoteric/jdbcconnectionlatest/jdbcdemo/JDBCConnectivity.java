@@ -8,13 +8,13 @@ import java.sql.Statement;
 public class JDBCConnectivity {
     public static void main(String[] args) {
         String url="jdbc:mysql://localhost:3306/sonar?user=root & password=12345";
-        String query="insert into employee(id,name,dept,salary,state,pid,mid) values(9,'lakshmi','ECE',15000.0,'Amaravathi',1,4)";
+        String query="insert into employee(id,name,dept,salary,state,pid,mid) values(16,'ramana','ECE',18000.0,'ragu',1,2)";
 
         try {
             Connection connection = DriverManager.getConnection(url);
             Statement statement= connection.createStatement();
-            int noOfRecordsinsertd= statement.executeUpdate(query);
-            System.out.println("Record inserted "+noOfRecordsinsertd);
+            int noOfRecordsinserted= statement.executeUpdate(query);
+            System.out.println("Record inserted "+noOfRecordsinserted);
             connection.close();
 
         } catch (SQLException e) {

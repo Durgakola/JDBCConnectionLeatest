@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class JdbcconnectionlatestApplication {
 
 	public static void main(String[] args) {
+
 		SpringApplication.run(JdbcconnectionlatestApplication.class, args);
 	}
 

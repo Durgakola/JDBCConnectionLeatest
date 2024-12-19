@@ -44,10 +44,11 @@ public class Insert {
             ps.setInt(7,scan.nextInt());
 
             int resut=ps.executeUpdate();
+
             if(resut!=0){
                 System.out.println("Inserted");
             }
-            else{
+            else {
                 System.out.println("No data Inserted ");
             }
         } catch (SQLException e) {
