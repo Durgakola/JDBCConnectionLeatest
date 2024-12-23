@@ -6,15 +6,13 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class PayService {
+    @Autowired
     ExternalJavaService externalJavaService;
-    public PayService (@Autowired ExternalJavaService externalJavaService){
+    public PayService (ExternalJavaService externalJavaService){
         this.externalJavaService=externalJavaService;
 
     }
 
-//    public PayService(){
-//        System.out.println("from payservice constructor");
-//    }
     public void pay(){
         System.out.println("they are pay");
         externalJavaService.external();

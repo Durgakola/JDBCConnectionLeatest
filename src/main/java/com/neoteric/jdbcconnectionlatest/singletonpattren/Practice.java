@@ -1,4 +1,4 @@
-package com.neoteric.jdbcconnectionlatest.springioc;
+package com.neoteric.jdbcconnectionlatest.singletonpattren;
 
 public class Practice {
     public static void main(String[] args) {
